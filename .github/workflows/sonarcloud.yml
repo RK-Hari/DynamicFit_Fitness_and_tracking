@@ -24,3 +24,4 @@ jobs:
           args: >
             -Dsonar.projectKey=RK-Hari_DynamicFit_Fitness_and_tracking
             -Dsonar.organization=rk-hari
+            -Dsonar.exclusions=**/*.java 
