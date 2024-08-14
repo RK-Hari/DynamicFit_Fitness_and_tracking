@@ -5,13 +5,15 @@ import BMICalculator from './BMICalculator';
 import Navbar from './Navbar';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
+import HomeReview from './HomeReview/HomeReview';
+import Chatbot from './ChatBot/ChatBot';
+import VoiceBot from './VoiceBot/VoiceBot';
 
 import homepicture1 from '../Assets/homepicture1.jpg';
 import homepage_video1 from '../Assets/homepage_video1.mp4';
 import bmivideo from '../Assets/bmivideo.mp4';
 
 import { useAuth } from '../Components/AuthContext';
-import { usePlan } from './Context/PlanContext';
 
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
@@ -75,7 +77,16 @@ const HomePage = () => {
   const handleClick = async (planDetails) => {
 
     const price = planDetails.price * 100;
-    console.log(price);
+
+    if (!user) {
+      MySwal.fire({
+        title: "Please log in first",
+        text: "You need to be logged in to purchase a plan.",
+        icon: 'warning',
+        confirmButtonText: 'OK'
+      });
+      return;
+    }
 
     var options = {
       key: "rzp_test_VNP0v0sZEC0YFa",
@@ -101,16 +112,6 @@ const HomePage = () => {
     };
     var pay = new window.Razorpay(options);
     pay.open();
-
-    if (!user) {
-      MySwal.fire({
-        title: "Please log in first",
-        text: "You need to be logged in to purchase a plan.",
-        icon: 'warning',
-        confirmButtonText: 'OK'
-      });
-      return;
-    }
   
     const result = await promptForBmiAndGender();
     if (!result.isConfirmed) return;
@@ -300,10 +301,20 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div id="homepage-contact-us">
+      <div id="contact-section">
         <ContactUs />
       </div>
+
+      <div>
+      <h1 className='homepage-plan-heading mb-5'>
+          User Reviews :
+        </h1>
+        <HomeReview/>
+      </div>
+
       <Footer />
+      <Chatbot/>
+      <VoiceBot/>
     </div>
   );
 };

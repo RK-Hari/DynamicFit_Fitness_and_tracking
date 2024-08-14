@@ -98,4 +98,9 @@ public class userController {
         }
     }
 
+    @GetMapping("/leaderboard")
+    public List<userModel> getLeaderboard() {
+        return userService.getLeaderboard();
+    }
+
 }

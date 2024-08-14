@@ -1,0 +1,130 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.voicebot-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px; /* Position the icon on the right side */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.voicebot-container.shaking {
+    animation: shake 2s infinite; /* Apply shaking animation */
+}
+
+.voicebot-container.visible {
+    animation: none; /* Stop shaking animation when visible */
+}
+
+.voicebot-icon {
+    cursor: pointer;
+    background-color: #B5838D; /* Change as needed */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mic-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+}
+
+.voicebot-box {
+    position: absolute;
+    bottom: 0;
+    right: 100%; /* Position the popup to the left of the icon */
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: translateX(-10px); /* Adjust if needed for positioning */
+}
+
+.voicebot-header {
+    background-color: #aaa088; /* Change as needed */
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.voicebot-body {
+    padding: 10px;
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.voicebot-buttons {
+    margin-bottom: 10px;
+}
+
+.voicebot-buttons button {
+    margin-right: 10px;
+}
+
+.voicebot-transcript,
+.voicebot-response {
+    margin: 5px 0;
+}
+
+.minimized .voicebot-box {
+    display: none;
+}
+
+.voicebot-buttons {
+    margin-bottom: 20px;
+}
+
+.voicebot-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #aaa088;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.voicebot-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.voicebot-buttons button:not(:disabled):hover {
+    background-color: #D3AB9F;
+}
+
+.voicebot-transcript,
+.voicebot-response {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.voicebot-transcript strong,
+.voicebot-response strong {
+    color: #333;
+}

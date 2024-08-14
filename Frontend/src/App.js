@@ -8,6 +8,8 @@ import ExcerciseDetails from './Components/ExcerciseComponents/ExcerciseDetails'
 import TrainerLogin from './Components/trainerLogin';
 import AddTrainerForm from './Components/AddTrainerForm';
 import TrainerPage from './Components/Trainer/TrainerPage';
+import Leaderboard from './Components/LeaderBoard/Leaderboard';
+import VoiceBot from './Components/VoiceBot/VoiceBot';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/trainerLogin" element={<TrainerLogin />} />
           <Route path="/trainerForm" element={<AddTrainerForm />} />
           <Route path="/trainerPage" element={<TrainerPage />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/voice" element={<VoiceBot />} />
         </Routes>
       </div>
     </Router>

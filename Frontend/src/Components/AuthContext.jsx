@@ -25,12 +25,7 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         setIsLoggedIn(false);
         setUser(null);
-        MySwal.fire({
-            title: "Logout Successful.",
-            text: 'See you again!',
-            icon: 'success',
-            confirmButtonText: 'OK'
-        });
+        
     };
 
     return (

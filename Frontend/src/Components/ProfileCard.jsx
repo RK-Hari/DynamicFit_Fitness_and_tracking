@@ -2,13 +2,14 @@ import React from 'react'
 import '../Styles/ProfileCard.css';
 
 import user from '../Assets/user.png';
+import profile from '../Assets/profile.png'
 
 const ProfileCard = ({name,email,age,gender,bmi,plan}) => {
   return (
     <div>
       <div className='profileCard-display'>
         <div className='profileCard-left'>
-            <img src={user} alt="" className='profileCard-left-userIcon'/>
+            <img src={profile} alt="" className='profileCard-left-userIcon'/>
             <p>{name || "null"}</p>
             <p>{email || "null"}</p>
         </div>

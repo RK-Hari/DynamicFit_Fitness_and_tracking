@@ -40,8 +40,9 @@ const Navbar = () => {
         <div className='navbar-right-elements'>
           <Link to="/" className='navbar-right-elements-a'>Home</Link>
           <Link to={profileNavigate} className='navbar-right-elements-a'>Profile</Link>
-          <Link className='navbar-right-elements-a'>About us</Link>
+          {/* <Link className='navbar-right-elements-a'>About us</Link> */}
           <Link to="/" onClick={handleScroll} className='navbar-right-elements-a'>Contact us</Link>
+          <Link to="/leaderboard" className='navbar-right-elements-a'>Leaderboard</Link>
           <div>
             <Link to="/login">
             {isLoggedIn ? (

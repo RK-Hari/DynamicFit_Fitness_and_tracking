@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+.leaderboard-container {
+    font-family: "Roboto Slab", serif;
+    width: 100%;
+    height: 100%;
+    background-color: #313131;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+}
+
+.leaderboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-style: italic;
+    font-size: 5.5rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.leaderboard-header:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 1.5px white;
+    font-size: 5.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.leaderboard-title {
+    text-align: center;
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Table container with overflow handling */
+.leaderboard-table-container {
+    overflow-x: auto;
+    padding: 0 20px; /* Adjusted for better responsiveness */
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Table styling */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    text-align: center;
+}
+
+/* Header styling */
+.leaderboard-thead {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Header cell styling */
+.leaderboard-th {
+    padding: 12px;
+    font-size: 25px;
+    text-align: center;
+    color: #4a4a4a;
+    background-color: #9ba08c;
+}
+
+/* Row styling with fully rounded edges */
+.leaderboard-tr {
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+/* Alternating row colors with hover effects */
+.leaderboard-row-1 {
+    background-color: #905f69;
+}
+
+.leaderboard-row-1:hover {
+    background-color: #a77380; /* Slightly lighter shade on hover */
+}
+
+.leaderboard-row-2 {
+    background-color: #c58082;
+}
+
+.leaderboard-row-2:hover {
+    background-color: #d4938d; /* Slightly lighter shade on hover */
+}
+
+.leaderboard-row-3 {
+    background-color: #b77f71;
+}
+
+.leaderboard-row-3:hover {
+    background-color: #c8967d; /* Slightly lighter shade on hover */
+}
+
+.leaderboard-row-4 {
+    background-color: #d4875e;
+}
+
+.leaderboard-row-4:hover {
+    background-color: #e5986b; /* Slightly lighter shade on hover */
+}
+
+/* Cell styling */
+.leaderboard-td {
+    padding: 12px;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .leaderboard-title {
+        font-size: 20px;
+    }
+    
+    .leaderboard-th, .leaderboard-td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

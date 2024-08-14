@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+.homereview-container{
+    display: flex;
+    font-family: "Roboto Slab", serif;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.homereview-card{
+    height: 430px;
+    width: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.homereview-card:hover{
+    cursor: pointer;
+    transform: perspective(1000px) rotateX(-10deg) rotateY(10deg);
+    box-shadow: 70px 30px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+
+.homereview-name{
+    font-size: large;
+    font-weight: bold;
+}
+
+.homereview-content{
+    
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+}
